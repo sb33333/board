@@ -5,11 +5,12 @@ import com.fastcampus.board.entity.Board;
 import com.fastcampus.board.repository.MyCrudRepository;
 import org.springframework.stereotype.Service;
 
-import javax.validation.ConstraintViolationException;
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Transactional
 public class BoardService {
 
     private final MyCrudRepository repository;
